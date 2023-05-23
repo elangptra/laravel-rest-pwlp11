@@ -79,7 +79,13 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, Mahasiswa $mahasiswa)
     {
-        //
+        $mahasiswa->update([
+            'Nim'=>$request->Nim,
+            'Nama'=>$request->Nama,
+            'Jurusan'=>$request->Jurusan,
+            'No_Handphone'=>$request->No_Handphone,
+            'kelas_id'=>$request->kelas_id,
+        ]);
     }
 
     /**
